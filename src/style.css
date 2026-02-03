@@ -13,10 +13,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html.is-changing .transition-fade {
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: rgb(138, 143, 152);
   text-decoration: inherit;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
 }
 a:hover {
   color: #535bf2;
@@ -25,14 +35,58 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #08090a;
+  color: #d0d6e0;
 }
 
-h1 {
+nav {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid rgba(247, 248, 248, 0.1);
+}
+
+nav a {
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 auto;
+  padding: 0 40px;
+  max-width: 600px;
+}
+
+footer {
+  padding: 20px 40px;
+  border-top: 1px solid rgba(247, 248, 248, 0.1);
+  color: rgb(138, 143, 152);
+  font-size: 14px;
+}
+
+section {
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1, h2 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  h1, h2 {
+    font-size: 2em;
+  }
 }
 
 #app {

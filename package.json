@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "@swup/preload-plugin": "^3.2.11",
+    "swup": "^4.8.2"
   }
 }
